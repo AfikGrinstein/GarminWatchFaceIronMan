@@ -1,0 +1,9 @@
+<drawables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <bitmap id="LauncherIcon" filename="launcher_icon.svg" dithering="none" />
+    <bitmap id="IronmanLogo" filename="ironman_logo.svg" dithering="none" />
+    <bitmap id="Battery0" filename="battery/battery_0.svg" dithering="none" />
+    <bitmap id="Battery25" filename="battery/battery_25.svg" dithering="none" />
+    <bitmap id="Battery50" filename="battery/battery_50.svg" dithering="none" />
+    <bitmap id="Battery75" filename="battery/battery_75.svg" dithering="none" />
+    <bitmap id="Battery100" filename="battery/battery_100.svg" dithering="none" />
+</drawables>

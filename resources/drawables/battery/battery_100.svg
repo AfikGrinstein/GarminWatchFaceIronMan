@@ -1,0 +1,6 @@
+<!-- 100% battery -->
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <rect x="6" y="9" width="18" height="12" rx="2" ry="2" fill="none" stroke="#FFFFFF" stroke-width="2" />
+  <rect x="24" y="12" width="2" height="6" rx="1" ry="1" fill="#FFFFFF" />
+  <rect x="7" y="10" width="16" height="10" rx="1" ry="1" fill="#30D158" />
+</svg>
