@@ -2,6 +2,7 @@ import Toybox.ActivityMonitor; // replaced Activity with ActivityMonitor for dai
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.System;
+import Toybox.Time;
 import Toybox.WatchUi;
 
 class RoadRunnerWatchFaceView extends WatchUi.WatchFace {
@@ -25,11 +26,21 @@ class RoadRunnerWatchFaceView extends WatchUi.WatchFace {
     function onUpdate(dc as Dc) as Void {
         // Get current time
         var clockTime = System.getClockTime();
-        var timeString = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
+        var timeString = Lang.format("$1$:$2$:$3$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d"), clockTime.sec.format("%02d")]);
+
+        var now = new Time.Moment(Time.now().value());
+        var date = Time.Gregorian.info(now, Time.FORMAT_MEDIUM);
         
+        // Format date as "31 JAN" (day and 3-letter month)
+        var dateString = Lang.format("$1$", [date.day.toString()]);
+
         // Set the time text on the TimeLabel
         var timeLabel = View.findDrawableById("TimeLabel") as WatchUi.Text;
         timeLabel.setText(timeString);
+        
+        // Set the date text on the DateLabel
+        var dateLabel = View.findDrawableById("DateLabel") as WatchUi.Text;
+        dateLabel.setText(dateString);
         
         // Daily steps via ActivityMonitor
         var info = ActivityMonitor.getInfo();
